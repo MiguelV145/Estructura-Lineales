@@ -7,6 +7,7 @@ import Materia.Models.NodoGenerico;
 public class PilaGenerica <T>{
 
     private NodoGenerico <T> top;
+    private int tamano;
 
 
     public PilaGenerica(){
@@ -41,4 +42,9 @@ public class PilaGenerica <T>{
         }
         return top.data;
     } 
+
+    public int size(){
+        return tamano;
+    }
+    
 }

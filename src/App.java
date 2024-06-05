@@ -1,3 +1,5 @@
+import Materia.Colas.Cola;
+import Materia.Colas.ColaGenerica;
 import Materia.Models.Pantalla;
 import Materia.Pilas.Pila;
 import Materia.Pilas.PilaGenerica;
@@ -35,6 +37,44 @@ public class App {
         System.out.println("Estoy en la pantalla  \n\t  -->"+ pilasPantallas.peek().getNombre());
 
 
+        Cola queue= new Cola();
+        //AÑADIR ELEMENTOS
+        queue.addNode(10);
+        queue.addNode(20);
+        queue.addNode(30);
+        //Mostrar el elemento en el frente
+        System.out.println("Elemento en el frente: " +queue.peek());//deberia darme 10
+        //Retirar elementos
+        System.out.println("Elemento retirado: "+ queue.remove());//dar 10
+        System.out.println("Elemetos en el frente: "+queue.peek());//dar 10
+
+        System.out.println("Elemento retirado: "+queue.remove());//10
+        System.out.println("Elemetos en el frente: "+queue.peek());
+
+
+        //Verificar si la cola esta vacia
+        System.out.println("¿Cola vacía ? "+(queue.isEmpty() ? "Si":"No") );
+
+        //Implimentacion  de la cola generica tipo pantalla
+        ColaGenerica<Pantalla> queuGenerica= new ColaGenerica<>();
+
+        queuGenerica.addNode(new Pantalla("Home Page", "/home"));
+        queuGenerica.addNode(new Pantalla("Menu Page", "/home/menu"));
+        queuGenerica.addNode(new Pantalla("Settings Page", "/home/menu/settings"));
+
+        System.out.println("La cola tiene "+queuGenerica.size()+" Elementos");
+
+        //Impresion
+        System.out.println("Estoy en la pantalla \t "+queuGenerica.peek().getNombre());
+        System.out.println("Pantalla destruida \t "+queuGenerica.remove().getNombre());
+        queuGenerica.addNode(new Pantalla("User Page", "/home/menu/user"));
+        System.out.println("Estoy en la pantalla \t "+queuGenerica.peek().getNombre());
+        System.out.println("Pnatalla destruida \t "+ queuGenerica.remove().getNombre());
+        System.out.println("Estoy en la pantalla \t "+queuGenerica.peek().getNombre());
+        System.out.println("Pnatalla destruida \t "+ queuGenerica.remove().getNombre());
+
+
+        System.out.println("La cola tiene "+queuGenerica.size()+" Elementos");
 
 
     }
