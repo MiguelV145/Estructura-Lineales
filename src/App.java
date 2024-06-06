@@ -1,3 +1,4 @@
+import Ejercicio_01_sing.SignValidator;
 import Materia.Colas.Cola;
 import Materia.Colas.ColaGenerica;
 import Materia.Models.Pantalla;
@@ -76,6 +77,17 @@ public class App {
 
         System.out.println("La cola tiene "+queuGenerica.size()+" Elementos");
 
+
+        SignValidator vi= new SignValidator();
+        SignValidator vi2= new SignValidator();
+        vi.isValid("()[]{}");
+        vi2.isValid("({)}[]");
+
+        System.out.println( vi.isValid("()"));
+        System.out.println(vi2.isValid("({)}[]"));
+
+
+        
 
     }
 }
