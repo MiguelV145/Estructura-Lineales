@@ -1,4 +1,7 @@
+import java.util.Stack;
+
 import Ejercicio_01_sing.SignValidator;
+import Ejercicio_02_sorting.StackSorter;
 import Materia.Colas.Cola;
 import Materia.Colas.ColaGenerica;
 import Materia.Models.Pantalla;
@@ -7,7 +10,7 @@ import Materia.Pilas.PilaGenerica;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        
 
         Pila pila= new Pila();
         pila.push(10);
@@ -86,8 +89,22 @@ public class App {
         System.out.println( vi.isValid("()"));
         System.out.println(vi2.isValid("({)}[]"));
 
+        // uso del sortStack
+        Stack<Integer> stack = new Stack<>();
+        stack.push(5);
+        stack.push(1);
+        stack.push(4);
+        stack.push(2);
 
-        
+        StackSorter sorter = new StackSorter();
+        sorter.sortStack(stack);
+
+        System.out.println((stack));
+
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop() + " ");
+        }
+            
 
     }
 }

@@ -46,5 +46,7 @@ public class PilaGenerica <T>{
     public int size(){
         return tamano;
     }
+
+    
     
 }
