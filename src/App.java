@@ -4,9 +4,11 @@ import Ejercicio_01_sing.SignValidator;
 import Ejercicio_02_sorting.StackSorter;
 import Materia.Colas.Cola;
 import Materia.Colas.ColaGenerica;
+import Materia.ListasEnlazadas.ListaEnlazada;
 import Materia.Models.Pantalla;
 import Materia.Pilas.Pila;
 import Materia.Pilas.PilaGenerica;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -104,7 +106,22 @@ public class App {
         while (!stack.isEmpty()) {
             System.out.print(stack.pop() + " ");
         }
-            
+          
+        ListaEnlazada lista= new ListaEnlazada();
+        lista.addNode(1);
+        lista.addNode(4);
+        lista.addNode(3);
+        lista.addNode(6);
+        lista.print();
+        lista.deleteNOde(6);
+        lista.print();
+        lista.deleteNOde(1);
+        lista.print();
+        lista.deleteNOde(3);
+        lista.print();
+
+
+
 
     }
 }
