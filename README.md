@@ -26,3 +26,7 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 
 ## ## Version 2.0.2
 - creacion de trabajo  de ordenamiento de colas y verificacion de elementos
+
+
+## ## Version 2.0.3
+- creacion de trabajo de LinkedLists

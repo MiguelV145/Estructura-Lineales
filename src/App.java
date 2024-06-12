@@ -2,6 +2,7 @@ import java.util.Stack;
 
 import Ejercicio_01_sing.SignValidator;
 import Ejercicio_02_sorting.StackSorter;
+import Ejercicio_03_linkedLists.LinkedListEjr;
 import Materia.Colas.Cola;
 import Materia.Colas.ColaGenerica;
 import Materia.ListasEnlazadas.ListaEnlazada;
@@ -121,6 +122,22 @@ public class App {
         lista.print();
         lista.deleteNOde(3);
         lista.print();
+
+
+        ////LinkenList
+        LinkedListEjr listaejer = new LinkedListEjr();
+        listaejer.addNode2(1);
+        listaejer.addNode2(2);
+        listaejer.addNode2(5);
+        listaejer.addNode2(7);
+        listaejer.addNode2(6);
+
+        int posicion = 1;
+        int resultado = listaejer.getByPoss(posicion);
+        System.out.println("El nodo en la posición " + posicion + 
+        " desde el final es: " + resultado);
+
+        
 
 
         System.out.println("lista generica");
