@@ -5,11 +5,11 @@ import Materia.Models.Node;
 public class ListaEnlazada {
 
     public Node head;
+    int size=0;
     //Constructor
     public ListaEnlazada(){
 
 
-        int size=0;
 
     }
     //Metodo de agregar nodods a la lista
@@ -17,6 +17,7 @@ public class ListaEnlazada {
         if(head ==null){
             head= new Node(value);
             //hasta aqui llega el metodo
+            size++; // incrementamos el tamaño
             return;
         }
 
@@ -27,17 +28,19 @@ public class ListaEnlazada {
         }
         //este seria el ultimo nodo una creacion de Nodo
         current.next=new Node(value);
-
+        size++; // incrementamos el tamaño
+        
     }
     
     /// Creamos el metodo para eliminar por valor
     public void deleteNOde(int value){
         if(head==null){
             return;// no hay elementos no hace nada
-            }
+        }
         if(head.value == value){
             //PASA AL SIGUEITE NODO
             head = head.next;
+            size--; // decrementamos el tamaño
             return;
         }
         
@@ -47,6 +50,7 @@ public class ListaEnlazada {
         while (current.next != null) {
             if(current.next.value == value){
                 current.next= current.next.next;
+                size--; // decrementamos el tamaño
                 return;
             }
             current=current.next;
@@ -54,7 +58,7 @@ public class ListaEnlazada {
     }
 
     public int size(){
-        return 0;
+        return size;
     }
     
 

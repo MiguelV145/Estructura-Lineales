@@ -5,6 +5,7 @@ import Ejercicio_02_sorting.StackSorter;
 import Materia.Colas.Cola;
 import Materia.Colas.ColaGenerica;
 import Materia.ListasEnlazadas.ListaEnlazada;
+import Materia.ListasEnlazadas.ListaEnlazadasGenerica;
 import Materia.Models.Pantalla;
 import Materia.Pilas.Pila;
 import Materia.Pilas.PilaGenerica;
@@ -107,6 +108,7 @@ public class App {
             System.out.print(stack.pop() + " ");
         }
           
+        System.out.println("\n_______________________________________________________________");
         ListaEnlazada lista= new ListaEnlazada();
         lista.addNode(1);
         lista.addNode(4);
@@ -121,6 +123,20 @@ public class App {
         lista.print();
 
 
+        System.out.println("lista generica");
+
+        ListaEnlazadasGenerica<Integer> listaGEnlazada= new ListaEnlazadasGenerica<>();
+        listaGEnlazada.addNode(1);
+        listaGEnlazada.addNode(4);
+        listaGEnlazada.addNode(3);
+        listaGEnlazada.addNode(6);
+        listaGEnlazada.print();
+        listaGEnlazada.deleteNode(6);
+        listaGEnlazada.print();
+        listaGEnlazada.deleteNode(1);
+        listaGEnlazada.print();
+        listaGEnlazada.deleteNode(3);
+        listaGEnlazada.print();
 
 
     }
